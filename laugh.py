@@ -1,20 +1,29 @@
 import random
 
-def end(n):
+def end(n,res):
   if (n <= 0.6):
-    print("J",end = '')
+   str = res + "J"
+   return str
   elif (n > 0.6 and n <= 0.8):
-    print("K",end = '')
+    str = res + "K"
+    return str
   elif (n > 0.9):
-    print ("JJ", end = '')
+    str = res + "S"
+    return str
+  else:
+    str = res + "A"
+    return str
 
 def laugh():
-    length = int(input("Length:"))
-    for i in range(length):
-      if i % 2 == 0:
-        n = random.random()
-        end(n)
-      else:
-        print("A", end = '')
+  res = ""
+  length = random.randint(3,46)
+  for i in range(length):
+    if i % 2 == 0:
+      n = random.random()
+      res = end(n,res)
+    else:
+      res = end(2,res)
+  return res
 
-laugh()
+result = laugh()
+print(result)
