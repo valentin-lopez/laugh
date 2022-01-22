@@ -1,22 +1,23 @@
 import random
 
-'''Pasaje de parametro por referencia(direccion de memoria) vs valor(valor del parametro)
+def addLetter(n,res):
+    '''Pasaje de parametro por referencia(direccion de memoria) vs valor(valor del parametro)
     cuando se pasa por valor no se modifica la variable del parametro
     los tipos compuestos (listas, arrays, etc) se pasan por referencia 
     los tipos primitivos (numeros, caracteres, etc) se pasan por valor'''
-    
-def end(n,tira):
+
+def addLetter(n,res):
   if (n <= 0.6):
-   str = tira + "J"
+   str = res + "J"
    return str
   elif (n > 0.6 and n <= 0.8):
-    str = tira + "K"
+    str = res + "K"
     return str
   elif (n > 0.9):
-    str = tira + "S"
+    str = res + "S"
     return str
   else:
-    str = tira + "A"
+    str = res + "A"
     return str
 
 def laugh():
@@ -25,10 +26,9 @@ def laugh():
   for i in range(length):
     if i % 2 == 0:
       n = random.random()
-      res = end(n,res)
+      res = addLetter(n,res)
     else:
-      res = end(2,res)
+      res = addLetter(2,res)
   return res
-
 result = laugh()
 print(result)
