@@ -1,6 +1,5 @@
 import random
 
-def addLetter(n,res):
     '''Pasaje de parametro por referencia(direccion de memoria) vs valor(valor del parametro)
     cuando se pasa por valor no se modifica la variable del parametro
     los tipos compuestos (listas, arrays, etc) se pasan por referencia 
